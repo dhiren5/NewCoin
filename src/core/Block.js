@@ -1,7 +1,9 @@
 import crypto from 'crypto';
+import { calculateEnergyBonus, estimateEnergyConsumption } from '../utils/EnergyUtils.js';
+import { BLOCKCHAIN_CONFIG } from './Constants.js';
 
 /**
- * Block class representing a single block in the EnergyAI blockchain
+ * Block class representing a single block in the EnergyAI blockchain (OPTIMIZED)
  * Each block contains energy computation data and AI workload verification
  */
 class Block {
@@ -11,7 +13,7 @@ class Block {
     this.previousHash = previousHash;
     this.hash = '';
     this.nonce = 0;
-    
+
     // Energy-specific data
     this.energyData = {
       totalEnergyConsumed: energyData.totalEnergyConsumed || 0, // in kWh
@@ -22,9 +24,13 @@ class Block {
       aiWorkloadType: energyData.aiWorkloadType || 'general', // training, inference, general
       computeProof: energyData.computeProof || null // Proof of actual AI computation
     };
-    
-    // Calculate energy efficiency bonus
-    this.energyBonus = this.calculateEnergyBonus();
+
+    // Calculate energy efficiency bonus using centralized utility
+    this.energyBonus = calculateEnergyBonus(
+      this.energyData.energySource,
+      this.energyData.efficiencyScore,
+      this.energyData.aiWorkloadType
+    );
   }
 
   /**
@@ -49,20 +55,20 @@ class Block {
    */
   mineBlock(difficulty, minerAddress) {
     const target = Array(difficulty + 1).join('0');
-    
+
     // Start mining
     const startTime = Date.now();
     const startEnergy = this.estimateEnergyConsumption();
-    
+
     while (this.hash.substring(0, difficulty) !== target) {
       this.nonce++;
       this.hash = this.calculateHash();
     }
-    
+
     const endTime = Date.now();
     const miningTime = (endTime - startTime) / 1000; // in seconds
     const energyUsed = this.estimateEnergyConsumption(miningTime);
-    
+
     // Record mining energy data
     this.miningMetrics = {
       minerAddress,
@@ -71,7 +77,7 @@ class Block {
       hashRate: this.nonce / miningTime,
       timestamp: endTime
     };
-    
+
     console.log(`Block mined: ${this.hash}`);
     console.log(`Mining time: ${miningTime}s, Energy used: ${energyUsed.toFixed(4)} kWh`);
   }
@@ -81,37 +87,7 @@ class Block {
    * Based on typical GPU power consumption (250W average)
    */
   estimateEnergyConsumption(timeInSeconds = 1) {
-    const avgPowerWatts = 250; // Average GPU power
-    const kWh = (avgPowerWatts * timeInSeconds) / (1000 * 3600);
-    return kWh;
-  }
-
-  /**
-   * Calculate energy efficiency bonus for green energy sources
-   */
-  calculateEnergyBonus() {
-    let bonus = 1.0;
-    
-    // Bonus for renewable energy
-    if (this.energyData.energySource === 'renewable') {
-      bonus *= 1.5;
-    } else if (this.energyData.energySource === 'nuclear') {
-      bonus *= 1.2;
-    }
-    
-    // Bonus for high efficiency
-    if (this.energyData.efficiencyScore > 80) {
-      bonus *= 1.3;
-    } else if (this.energyData.efficiencyScore > 60) {
-      bonus *= 1.1;
-    }
-    
-    // Bonus for AI inference (more efficient than training)
-    if (this.energyData.aiWorkloadType === 'inference') {
-      bonus *= 1.2;
-    }
-    
-    return bonus;
+    return estimateEnergyConsumption(timeInSeconds);
   }
 
   /**

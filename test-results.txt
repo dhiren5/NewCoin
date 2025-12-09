@@ -1,0 +1,169 @@
+﻿
+> energyai-blockchain@1.0.0 test:optimized
+> node src/test-optimized.js
+
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+≡ƒº¬ ENERGYAI BLOCKCHAIN - OPTIMIZATION TEST SUITE
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+
+≡ƒôï Test Wallets Created:
+   Miner: 96da6e8133e8c48d
+   Energy Provider: 29b412d21fefaa3f
+   AI Company: 4832af1ee80d7355
+   User: fc51e55fd0032623
+
+≡ƒöì TEST 1: Input Validation
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+   Γ£à PASSED: Correctly rejected negative energy amount
+   Γ£à PASSED: Correctly rejected invalid energy source
+   Γ£à PASSED: Correctly rejected negative compute units
+
+ΓÜí TEST 2: Energy Tokenization
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+ΓÜí Tokenized 100 kWh -> 1500.00 EAI (renewable)
+   Renewable: 100 kWh -> 1500.00 EAI
+ΓÜí Tokenized 100 kWh -> 1200.00 EAI (nuclear)
+   Nuclear: 100 kWh -> 1200.00 EAI
+ΓÜí Tokenized 100 kWh -> 1000.00 EAI (mixed)
+   Mixed: 100 kWh -> 1000.00 EAI
+
+Block mined: 0000e0be7b40fac98a87d50767cb7c12363849f1a923226cced03255b0338006
+Mining time: 0.216s, Energy used: 0.0000 kWh
+Γ£à Block successfully mined!
+≡ƒÜÇ TEST 3: Performance - Balance Caching
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+   First call (cache miss): 0ms
+   Second call (cache hit): 0ms
+   Speedup: ΓÜá∩╕Å 0.00x faster
+   Balance: 3700 EAI
+
+≡ƒôè TEST 4: Transaction Indexing
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+   Transactions for energy provider: 3
+   Γ£à Indexed lookup working
+
+≡ƒÆ╗ TEST 5: Compute Allocation
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+≡ƒÆ╗ Allocated 10 GPU hours (~3.00 kWh)
+≡ƒôñ Transaction added to pool (2 pending)
+Block mined: 00009c1b79a7f05809ea2e16070bb513a06e5432fb324679c24e5dd4716b6b75
+Mining time: 0.111s, Energy used: 0.0000 kWh
+Γ£à Block successfully mined!
+   AI Company balance: 30 EAI
+
+≡ƒî▒ TEST 6: Carbon Credits
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+≡ƒî▒ Purchased 50 kg CO2 credits for 25.00 EAI
+≡ƒôñ Transaction added to pool (2 pending)
+Block mined: 0000a8df8f56e6db69273bcdf2254171148195d6cc595cb90ed7d7ba13829198
+Mining time: 0.002s, Energy used: 0.0000 kWh
+Γ£à Block successfully mined!
+   Energy provider balance after carbon credit: 3645 EAI
+
+ΓÜÖ∩╕Å  TEST 7: Dynamic Difficulty Adjustment
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+   Initial difficulty: 4
+ΓÜí Tokenized 10 kWh -> 150.00 EAI (renewable)
+Block mined: 00009605869309fbff989ecc682f941a6e5989b450280ddef35ae7838755868d
+Mining time: 0.087s, Energy used: 0.0000 kWh
+Γ£à Block successfully mined!
+ΓÜí Tokenized 10 kWh -> 150.00 EAI (renewable)
+Block mined: 0000f2b1d4f72d92773bf603a47f3f5b9d1e8fa540813ab014ead9deb1bf7865
+Mining time: 0.12s, Energy used: 0.0000 kWh
+Γ£à Block successfully mined!
+ΓÜí Tokenized 10 kWh -> 150.00 EAI (renewable)
+Block mined: 0000062fdc3a9e4f9bd741ee157a950c01de273ced8e56906f7defce1f6a91df
+Mining time: 0.217s, Energy used: 0.0000 kWh
+Γ£à Block successfully mined!
+ΓÜí Tokenized 10 kWh -> 150.00 EAI (renewable)
+Block mined: 00000a0bfb494ac7b3bdd82a58e3e75c2b2ed3f18db8e32707913842c6199e9f
+Mining time: 0.01s, Energy used: 0.0000 kWh
+Γ£à Block successfully mined!
+ΓÜí Tokenized 10 kWh -> 150.00 EAI (renewable)
+Block mined: 0000bb692a04e4278f495e611ecf09b6f5afa430480d189d04bbeb70894c650a
+Mining time: 0.192s, Energy used: 0.0000 kWh
+Γ£à Block successfully mined!
+ΓÜí Tokenized 10 kWh -> 150.00 EAI (renewable)
+Block mined: 000079a012427bc876d238e422ab3791f1a60ca312cfe55de4608a5645d5bdbb
+Mining time: 0.112s, Energy used: 0.0000 kWh
+Γ£à Block successfully mined!
+Γ¼å∩╕Å  Difficulty increased to 5
+ΓÜí Tokenized 10 kWh -> 150.00 EAI (renewable)
+Block mined: 0000025fa00e9b5d3e3841d3a5cc521228062ee8c238dd4d070b7896f1cbfc8b
+Mining time: 6.385s, Energy used: 0.0004 kWh
+Γ£à Block successfully mined!
+ΓÜí Tokenized 10 kWh -> 150.00 EAI (renewable)
+Block mined: 000002653454281697317cd4a17461f3c3f1807c03a59bdb1d489d8b8b510c6e
+Mining time: 1.498s, Energy used: 0.0001 kWh
+Γ£à Block successfully mined!
+ΓÜí Tokenized 10 kWh -> 150.00 EAI (renewable)
+Block mined: 0000098dc0efc4f72c96e99391e85c4e01e0e1b37105c53c96255f9ddfec7492
+Mining time: 0.904s, Energy used: 0.0001 kWh
+Γ£à Block successfully mined!
+ΓÜí Tokenized 10 kWh -> 150.00 EAI (renewable)
+Block mined: 000000193ce12ed205043453d10b8743aaacba98d3ebb2c0ec4b4433ed114ce8
+Mining time: 3.693s, Energy used: 0.0003 kWh
+Γ£à Block successfully mined!
+ΓÜí Tokenized 10 kWh -> 150.00 EAI (renewable)
+Block mined: 000004c925d14aa42276368f1f3b32bbc7c9ca53f1f8b0a18e976b7400904af7
+Mining time: 4.485s, Energy used: 0.0003 kWh
+Γ£à Block successfully mined!
+ΓÜí Tokenized 10 kWh -> 150.00 EAI (renewable)
+Block mined: 000002db477a69d5905fdf4a41519102500dff49f2ce42771e56cb3152be4e31
+Mining time: 1.494s, Energy used: 0.0001 kWh
+Γ£à Block successfully mined!
+   Final difficulty after 12 blocks: 5
+   Difficulty adjustment: Γ£à Working
+
+≡ƒÆ░ TEST 8: Mining Reward Halving
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+   Current block height: 16
+   Current mining reward: 100 EAI
+   Γ£à Reward calculation working
+
+≡ƒöÉ TEST 9: Blockchain Validation
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+   Blockchain valid: Γ£à Yes
+   After tampering: Γ£à PASSED - Detected tampering
+
+≡ƒôê TEST 10: Statistics & Caching
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+   First call: 0ms
+   Second call (cached): 0ms
+   Total Blocks: 16
+   Total Energy: 473.00 kWh
+   Total Carbon Offset: 135.00 kg CO2
+   Total Compute: 10.00 GPU hours
+   Average Block Time: 1.30s
+   Pending Transactions: 1
+   Energy Providers: 1
+
+≡ƒÅå TEST 11: Energy Leaderboard
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+   1. 046d130abc...
+      Energy: 420.00 kWh
+      Tokens: 5500.00 EAI
+      Source: renewable
+
+≡ƒöÆ TEST 12: Transaction Pool Limits
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+   Current pool size: 1
+   Max pool size: 1000
+   Γ£à Pool management working
+
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+≡ƒôè TEST SUMMARY
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+   Total Blocks: 16
+   Blockchain Valid: Γ£à
+   Miner Balance: 1544 EAI
+   Energy Provider Balance: 5445 EAI
+   AI Company Balance: 30 EAI
+
+Γ£à All optimization tests completed successfully!
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+
+≡ƒÆ╛ Cache Performance:
+   Balance Cache: {"size":0,"maxSize":1000,"ttl":5000}
+   Stats Cache: {"size":0,"maxSize":10,"ttl":5000}
+
